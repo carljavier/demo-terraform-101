@@ -1,9 +1,14 @@
 terraform {
   required_version = ">= 0.12.0"
+  
+  required_providers {
+    aws = {
+      version = ">= 3.20.0"
+    }
+  }
 }
 
 provider "aws" {
-  version = ">= 3.20.0"
 }
 
 module "server" {
